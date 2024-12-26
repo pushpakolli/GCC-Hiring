@@ -1,0 +1,53 @@
+/* NavigationMenu.css */
+
+/* Menu Button */
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 24px; /* Size of the menu icon */
+  cursor: pointer;
+  color: #333; /* Color of the icon */
+  position: fixed; /* Fixed position on the top left */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  z-index: 1001; /* Above sidebar */
+}
+
+/* Sidebar Menu */
+.nav-menu {
+  width: 200px;
+  height: 100%;
+  background-color: #A4A3D5; /* Sidebar background color */
+  border-radius: 30px; /* Rounded corners */
+  padding: 20px; /* Padding inside sidebar */
+  color: black; /* Text color */
+  position: fixed; /* Fixed position on the left */
+  left: -220px; /* Initially hide sidebar off-screen */
+  top: 0; /* Start from the top */
+  z-index: 1000; /* Ensure it appears above other elements */
+  transition: left 0.3s ease; /* Smooth transition for menu opening */
+}
+
+.nav-menu.open {
+  left: 0; /* Move sidebar into view */
+}
+
+.nav-menu ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.nav-menu li {
+  margin: 15px 0; /* Space between items */
+}
+
+.nav-menu li a {
+  color: white; /* Link color */
+  text-decoration: none; /* No underline */
+  font-size: 18px; /* Font size */
+  display: block; /* Block element for easier clicking */
+}
+
+.nav-menu li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

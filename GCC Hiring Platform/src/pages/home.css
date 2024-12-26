@@ -1,0 +1,101 @@
+
+.nav-menu {
+  width: 200px;
+  height: 100vh;
+  background-color:white;
+  border: 2px solid #A4A3D5;
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-menu ul li {
+  margin: 60px 0;
+}
+
+.nav-menu ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  transition: color 0.2s;
+}
+
+.nav-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.home-content {
+  margin-left: 220px;
+  padding: 20px;
+  width: calc(100% - 220px);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-content img {
+  width: 80%; /* Adjust this value as needed */
+  max-width: 700px; /* Set a maximum width for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 20px; /* Add some space above the image */
+}
+
+.menu-button {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #A4A3D5;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+      transform: translateX(-100%);
+  }
+
+  .nav-menu.open {
+      transform: translateX(0);
+  }
+
+  .home-content {
+      margin-left: 0;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  .home-content h1 {
+      font-size: 25px;
+  }
+
+  .menu-button {
+      display: block;
+      z-index: 1000;
+  }
+
+  .nav-menu.open ~ .menu-button {
+      display: none;
+  }
+}

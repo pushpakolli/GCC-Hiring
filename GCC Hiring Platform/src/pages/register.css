@@ -1,0 +1,206 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80vh;
+  padding-top: 10px;
+}
+
+.register-content {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.form-section {
+  width: 45%;
+  margin-bottom: 10px;
+}
+
+.register-title {
+  font-size: 32px;
+  color: #0B096A;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0B096A;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.register-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.register-btn {
+  padding: 10px 24px;
+  background-color: #0B096A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.register-btn:hover {
+  background-color: #0A0865;
+}
+
+.login-text {
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.image-section {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  height: 500px;
+  width: 470px;
+  object-fit: contain;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Logo container styling */
+.logo-container {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 150px;
+  height: 50px;
+}
+
+.gcc-logo {
+  width: 170px;
+  height: auto;
+}
+
+footer {
+  background-color: #A4A3D5;
+  height: 54px;
+  width: 100%;
+  text-align: center;
+  line-height: 54px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .register-content {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .form-section,
+  .image-section {
+    width: 100%;
+  }
+
+  .image-section img {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Adjust logo size for medium screens */
+  .logo-container {
+    width: 120px;
+    height: 40px;
+    top: 15px;
+    right: 30px;
+  }
+
+  .gcc-logo {
+    width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-title {
+    font-size: 24px;
+  }
+
+  .form-group input {
+    padding: 8px;
+  }
+
+  .register-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .login-text {
+    margin-top: 10px;
+  }
+
+  .register-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .image-section img {
+    width: 80%;
+  }
+
+  footer {
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  /* Adjust logo size for small screens */
+  .logo-container {
+    width: 100px;
+    height: 30px;
+    top: 10px;
+    right: 20px;
+  }
+
+  .gcc-logo {
+    width: 110px;
+  }
+}

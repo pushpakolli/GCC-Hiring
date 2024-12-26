@@ -1,0 +1,238 @@
+/* General Styling to prevent horizontal scrolling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent both horizontal and vertical scrolling */
+}
+
+.Payment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  overflow: hidden; /* Prevent scrolling in the container */
+}
+
+.Payment-title {
+  font-size: 32px;
+  color: #0B096A;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.scan-to-pay {
+  font-size: 20px;
+  color: #1C1B55;
+  margin-bottom: 20px;
+}
+
+.Payment-content {
+  display: flex;
+  flex-direction: column; /* Stack everything vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Optional: limits width to avoid stretching too much on wide screens */
+  flex-wrap: wrap;
+}
+
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Full width for proper centering */
+  margin-bottom: 20px;
+}
+
+.qr-code-container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #0B096A;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.qr-code {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.payment-methods-title {
+  font-size: 20px;
+  color: #0B096A;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds space between icons */
+  margin-bottom: 20px;
+}
+
+.payment-method-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Upload Section */
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0; /* Margin around the upload section */
+}
+
+.upload-label {
+  font-size: 16px;
+  color: #0B096A;
+  margin-bottom: 10px; /* Space between label and input */
+}
+
+input[type="file"] {
+  padding: 10px; /* Padding for better input appearance */
+  border: 1px solid #0B096A;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Space between input */
+}
+
+/* Payment Success Message and Button */
+.payment-success-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.payment-success-message {
+  font-size: 18px;
+  color: green; /* Green for success indication */
+  margin-bottom: 10px;
+}
+
+.proceed-button {
+  padding: 10px 20px;
+  background-color: #0B096A; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.proceed-button:hover {
+  background-color: #1C1B55; /* Darker shade on hover */
+}
+
+/* Footer Section */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  margin-top: 20px; /* Adjust as needed */
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+}
+
+.footer {
+  font-size: 16px;
+  color: #0B096A;
+  text-align: center;
+}
+
+/* Image Section */
+.pay-image-section {
+  position: absolute; /* Absolute positioning to place image above footer */
+  bottom: 50px; /* Adjust to position it just above the footer */
+  right: 20px; /* Position it to the right */
+  width: 250px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.pay-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Responsive styles for different dimensions */
+@media (max-width: 1200px) {
+  /* Medium screens */
+  .Payment-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qr-code-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .payment-methods {
+    flex-direction: row;
+  }
+
+  .payment-method-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .image-section {
+    width: 100px;
+    height: 100px;
+    right: 10px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+
+  /* Adjust styles for the upload section in mobile view */
+  .upload-section {
+    width: 100%; /* Full width on mobile */
+    padding: 10px; /* Padding for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Smaller screens */
+  .pay-image-section {
+    display: none; /* Hide image on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .Payment-title {
+    font-size: 24px; /* Adjust title size */
+  }
+
+  .scan-to-pay {
+    font-size: 18px; /* Adjust scan message size */
+  }
+
+  .payment-success-message {
+    font-size: 16px; /* Adjust success message size */
+  }
+
+  .proceed-button {
+    font-size: 14px; /* Adjust button size */
+  }
+}

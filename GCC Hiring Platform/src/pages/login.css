@@ -1,0 +1,209 @@
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-top: 10px; 
+}
+
+/* Content area for form and image sections */
+.login-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  flex-wrap: wrap;
+  margin-top: 40px; /* Margin to further push content down */
+}
+
+/* Form section styling */
+.form-section {
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+/* Form title */
+.login-title {
+  font-size: 36px;
+  color: #0B096A;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-top: 50px; /* Increased margin to push the title down */
+  padding-top: 50px; /* Additional padding for spacing above the title */
+  margin-bottom: 40px;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+/* Form group input styling */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0B096A;
+  border-radius: 8px;
+  outline: none; /* Remove default browser outline */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: outline-color 0.3s ease;
+}
+.form-group input:focus {
+  outline: 1px solid #0B096A; /* Change the color when input is focused */
+  border-color: #0B096A; /* Optional: Change the border color on focus */
+}
+
+/* Action buttons and text links for login */
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Smaller login button styling */
+.login-btn {
+  padding: 10px 26px;
+  background-color: #0B096A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.login-btn:hover {
+  background-color: #0A0865;
+}
+/* Style for both 'Already have an account?' and 'Don't have an account?' */
+/* General styling for account text */
+.register-text {
+  font-size: 14px;
+  margin-left: 20px;
+  color: #050431;
+  font-weight: bold;
+}
+
+/* Specific styling for 'Register' link inside the account text */
+.register-text a {
+  color: #3a38a2; /* Ensure the link has the same color */
+  text-decoration: none; /* Remove underline by default */
+  font-weight: bold; /* Make sure the link stands out */
+}
+
+/* Hover effect only for the 'Register' link */
+.register-text a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  cursor: pointer; /* Pointer to indicate it's clickable */
+}
+
+
+
+
+
+/* Image section styling */
+.image-section {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px; /* Additional margin to push the image down */
+}
+
+.image-section img {
+  height: 300px;
+  width: 470px;
+
+  object-fit: contain;
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);*/
+}
+/* Forgot Password link styling */
+.forgot-password {
+  text-align: right;
+  margin-top: 5px;
+}
+
+.forgot-password a {
+  color: #0B096A;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #FF6F61; /* Change color on hover */
+}
+
+
+/* Footer styling */
+.footer {
+  background-color: #A4A3D5;
+  height: 54px;
+  width: 100%;
+  text-align: center;
+  line-height: 54px;
+  margin-top: 100px; /* Increased margin to push footer further down */
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .login-content {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .form-section, .image-section {
+    width: 100%;
+  }
+
+  .image-section img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 480px) {
+  .login-title {
+    font-size: 24px;
+  }
+
+  .form-group input {
+    padding: 8px;
+  }
+
+  .login-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .register-text {
+    margin-top: 10px;
+  }
+
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .image-section img {
+    width: 80%;
+  }
+
+  .footer {
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+  }
+}

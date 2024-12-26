@@ -1,0 +1,137 @@
+/* Reset styles */
+.guidelines-body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.guidelines-body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Header styling */
+.guidelines-body .guidelines-header {
+  background-color: #7874be; /* Soft purple color */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100vw;
+  margin-bottom: 10px;
+}
+
+/* Instructions container */
+.guidelines-body .guidelines-content-container {
+  flex: 1; /* Allows the instructions to take up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Space below header */
+}
+
+/* Instructions card styling */
+.guidelines-body .instructions-card {
+  background-color: white; /* White background for the card */
+  padding: 50px 40px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 80%; /* Set a width for the card */
+  max-width: 600px; /* Maximum width for larger screens */
+}
+
+/* Instructions heading */
+.guidelines-body .instructions-card h2 {
+  font-size: 1.5rem; /* Style for the heading */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+/* List styling */
+.guidelines-body .instructions-card ul {
+  list-style-type: disc;
+  padding: 0; /* Remove padding to center the list */
+  margin: 20px auto; /* Center the list with auto margins */
+  text-align: left; /* Align text to the left for better readability */
+}
+
+/* List item styling */
+.guidelines-body .instructions-card li {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0.8rem 0;
+}
+
+/* Emphasized text for good luck message */
+.guidelines-body .guidelines-good-luck {
+  font-size: 1.1rem;
+  color: #4a00e0;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Button styling */
+.guidelines-body .start-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.guidelines-body .start-button-wrapper button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #fcfcfc;
+  color: white;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.guidelines-body .start-button-wrapper button:hover {
+  background-color: #a0c9f2;
+}
+
+/* Image styling */
+.guidelines-body .guidelines-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.guidelines-body .guidelines-image img {
+  max-width: 200px; /* Increased size */
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .guidelines-body .guidelines-header {
+    font-size: 1rem;
+  }
+  
+  .guidelines-body .instructions-card li {
+    font-size: 1rem; /* Adjust for smaller screens */
+  }
+
+  .guidelines-body .guidelines-good-luck {
+    font-size: 1rem;
+  }
+
+  .guidelines-body .start-button-wrapper button {
+    font-size: 0.9rem;
+  }
+
+  .guidelines-body .guidelines-image img {
+    max-width: 100px; /* Adjusted for smaller screens */
+  }
+}
